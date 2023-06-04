@@ -1,187 +1,359 @@
-body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    background: #060016;
-    font-family: 'Roboto Condensed', sans-serif;
-    color: #ffffff;
+a {
+  text-decoration: none;
+}
 
+ul {
+  list-style: none;
+  display: flex;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: #060016;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
 }
 
 /* Header content */
-
 header {
-    margin: 0;
-    padding: 1vh;
-    display: block;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    background: #070725;
-    border-bottom:solid #001C3D;
+  margin: 0;
+  padding: 1vh;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  border-bottom: 1px solid #69d3ff;
 }
 
 header nav {
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    width: 100%;
-    align-content: center;
-    text-decoration: none;
-    list-style: none;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  align-content: center;
+  text-decoration: none;
+  list-style: none;
 }
 
 header nav ul {
-   
-    text-decoration: none;
-    list-style: none;
-    padding: 0;
-    
-
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
 }
 
 header nav ul li {
-
-    padding: 20px;
-    display: inline-block;
-    padding: 0 20px;
-
-
+  padding: 20px;
+  display: inline-block;
+  padding: 0 20px;
 }
 
 header nav ul li a {
-    text-decoration: none;
-    color: #ffffff;
-    position: relative;
-    display: block;
-    cursor: pointer;
-
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  display: block;
+  cursor: pointer;
 }
 
-  
-
-.list__item--yellow {
-    color: #FFC56C;
-  }
-  
-  .list__item--blue {
-    color: #6EC5E9;
-  }
-  
-  .list__item--red {
-    color: #FF5959;
-  }
-  
-  header nav ul li a {
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      width: 0%;
-      height: 4px;
-      bottom: -2px;
-      margin-top: -0.5px;
-      background: #fff;
-    }
-  
-    &:before {
-      left: -2.5px;
-    }
-  
-    &:after {
-      right: 2.5px;
-      background: #fff;
-      transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
-    }
-  
-    &:hover {
-      &:before {
-        background: #fff;
-        width: 100%;
-        transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
-      }
-  
-      &:after {
-        background: transparent;
-        width: 100%;
-        transition: 0s;
-      }
-    }
-  }
+header nav ul li a:before, header nav ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 4px;
+  bottom: -2px;
+  margin-top: -0.5px;
+  background: #fff;
+}
+header nav ul li a:before {
+  left: -2.5px;
+}
+header nav ul li a:after {
+  right: 2.5px;
+  background: #fff;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+header nav ul li a:hover:before {
+  background: #fff;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+header nav ul li a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
 
 /* Sobre section */
-
 #sobre {
-    width: 80%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    justify-content: center;
+  width: 80%;
+  padding: 30px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
 }
 
 #sobre h1 {
-    font-family: 'Raleway';
-    font-weight: 900;
-
+  font-family: "Raleway";
+  font-weight: 900;
 }
 
 #sobre h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    font-size: 20;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15;
 }
 
 #title-name {
-    grid-area: 1 / 1 / 2 / 6;
-    
+  grid-area: 1/1/2/6;
 }
 
 #img-profile {
-    grid-area: 2 / 1 / 5 / 3;
-    justify-self: center;
-    
+  grid-area: 2/1/5/3;
+  justify-self: center;
 }
 
 #img-profile img {
-    border-radius: 300px;
+  width: 300px;
+  border-radius: 300px;
+}
+
+#img-profile div {
+  position: relative;
+}
+#img-profile div::before, #img-profile div::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  border-radius: 300px;
+  border: 2px solid #69d3ff;
+  transition: all 0.25s ease-out;
+}
+#img-profile div::before {
+  background-color: #69d3ff;
+  top: -4px;
+  left: -13px;
+}
+#img-profile div::after {
+  bottom: -1px;
+  right: -8px;
+}
+#img-profile div:hover::before {
+  top: 15px;
+  left: 15px;
+}
+#img-profile div:hover::after {
+  bottom: 15px;
+  right: 15px;
 }
 
 #social-links {
-    grid-area: 5 / 1 / 6 / 3;
-    list-style: none;
-    margin-top: -50px;
-    justify-self: center;
-
+  grid-area: 5/1/6/3;
+  list-style: none;
+  justify-self: center;
 }
 
 #social-links ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
-#social-links ul li{
-    margin: 20px;
-    
-
+#social-links ul li {
+  margin: 20px;
 }
 
 #about-text {
-    grid-area: 2 / 3 / 4 / 6;
+  grid-area: 2/3/4/6;
 }
 
 #about-text h3 {
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 400;
-    font-size: 30;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-size: 25;
 }
 
 #about-text p {
-    font-family: 'Julius Sans One', sans-serif;
-    font-weight: 400;
-    font-size: 20;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-size: 15;
 }
+
+.tag {
+  width: 100%;
+}
+
+.tag p {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  background: rgba(105, 210, 255, 0.4941176471);
+  color: #69d3ff;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+
+#experiencias {
+  text-align: center;
+}
+#experiencias #title-exp {
+  width: 100%;
+}
+#experiencias #title-exp h1 {
+  margin: auto;
+  padding: 30px;
+  font-family: "Raleway", sans-serif;
+  font-size: 30;
+  font-weight: 900;
+}
+
+.exp-techs {
+  width: 100%;
+  margin: 50px 0 50px 0;
+}
+.exp-techs ul {
+  margin: auto;
+  justify-content: center;
+  padding: 0;
+}
+.exp-techs li {
+  padding: 10px;
+}
+
+#title-port {
+  align-self: center;
+  text-align: center;
+}
+#title-port h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30;
+  font-weight: 900;
+}
+#title-port ul {
+  justify-content: center;
+  padding: 0;
+  margin: auto;
+}
+#title-port ul li {
+  border: 2px solid rgba(105, 210, 255, 0.4941176471);
+  color: rgba(105, 210, 255, 0.4941176471);
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+#cards {
+  display: flex;
+  flex-flow: wrap;
+  height: -moz-max-content;
+  height: max-content;
+  justify-content: center;
+}
+
+.card-port {
+  border: 1px solid rgba(105, 210, 255, 0.4941176471);
+  text-align: justify;
+  max-width: 300px;
+  padding: 40px;
+  margin: 30px;
+  border-radius: 40px;
+}
+.card-port img {
+  width: 300px;
+}
+.card-port h2, .card-port p {
+  font-family: "Raleway", sans-serif;
+}
+.card-port h2 {
+  font-size: 20;
+  font-weight: 900;
+}
+.card-port p {
+  height: 150px;
+  font-size: 15;
+  font-weight: 400;
+}
+.card-port ul {
+  justify-content: left;
+  padding: 0;
+  margin-top: 10px;
+}
+.card-port ul li {
+  text-align: center;
+  background: rgba(105, 210, 255, 0.4941176471);
+  color: #69d3ff;
+  width: 100px;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
+.icon > img {
+  position: relative;
+}
+
+#email-contato {
+  display: block;
+}
+
+#Contato {
+  margin: 50px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+#Contato h1 {
+  font-size: 30;
+  font-weight: 900;
+}
+#Contato div {
+  justify-content: center;
+}
+#Contato a {
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  border: 2px solid rgba(105, 210, 255, 0.4941176471);
+  color: #69d3ff;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+}
+#Contato div p {
+  color: #ffffff;
+  font-weight: 400;
+}
+#Contato div p span {
+  width: 100px;
+  color: #69d3ff;
+}
+#Contato p {
+  color: #69d3ff;
+  font-weight: 900;
+}
+
+footer {
+  background: #111111;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+footer p {
+  align-self: center;
+}/*# sourceMappingURL=index.css.map */

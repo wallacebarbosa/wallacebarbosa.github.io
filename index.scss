@@ -1,0 +1,396 @@
+$primary-color: #69d3ff;
+$primary-color-opacity:#69d2ff7e;
+
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  background: #060016;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #ffffff;
+}
+
+/* Header content */
+
+header {
+  margin: 0;
+  padding: 1vh;
+  display: block;
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  border-bottom: 1px solid $primary-color;
+}
+
+header nav {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+  align-content: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+header nav ul {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  padding: 20px;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+
+header nav ul li a {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    bottom: -2px;
+    margin-top: -0.5px;
+    background: #fff;
+  }
+
+  &:before {
+    left: -2.5px;
+  }
+
+  &:after {
+    right: 2.5px;
+    background: #fff;
+    transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+  }
+
+  &:hover {
+    &:before {
+      background: #fff;
+      width: 100%;
+      transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    &:after {
+      background: transparent;
+      width: 100%;
+      transition: 0s;
+    }
+  }
+}
+
+/* Sobre section */
+
+#sobre {
+  width: 80%;
+  padding: 30px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  justify-content: center;
+}
+
+#sobre h1 {
+  font-family: "Raleway";
+  font-weight: 900;
+}
+
+#sobre h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 15;
+}
+
+#title-name {
+  grid-area: 1 / 1 / 2 / 6;
+}
+
+#img-profile {
+  grid-area: 2 / 1 / 5 / 3;
+  justify-self: center;
+}
+
+#img-profile img {
+  width: 300px;
+  border-radius: 300px;
+}
+
+#img-profile div {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-radius: 300px;
+    border: 2px solid $primary-color;
+    transition: all 0.25s ease-out;
+  }
+  &::before {
+    background-color: $primary-color;
+    top: -4px;
+    left: -13px;
+  }
+  &::after {
+    bottom: -1px;
+    right: -8px;
+  }
+  &:hover {
+    &::before {
+      top: 15px;
+      left: 15px;
+    }
+    &::after {
+      bottom: 15px;
+      right: 15px;
+    }
+  }
+}
+
+#social-links {
+  grid-area: 5 / 1 / 6 / 3;
+  list-style: none;
+
+  justify-self: center;
+}
+
+#social-links ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+#social-links ul li {
+  margin: 20px;
+}
+
+#about-text {
+  grid-area: 2 / 3 / 4 / 6;
+}
+
+#about-text h3 {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-size: 25;
+}
+
+#about-text p {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-size: 15;
+}
+
+// experiencia
+
+.tag {
+  width: 100%;
+}
+
+.tag p {
+  width: fit-content;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  background: $primary-color-opacity;
+  color: $primary-color;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+}
+
+#experiencias {
+  text-align: center;
+  #title-exp {
+    width: 100%;
+
+    h1 {
+      margin: auto;
+      padding: 30px;
+      font-family: "Raleway", sans-serif;
+      font-size: 30;
+      font-weight: 900;
+    }
+  }
+}
+
+.exp-techs {
+  width: 100%;
+  margin: 50px 0 50px 0;
+  ul {
+    margin: auto;
+    justify-content: center;
+    padding: 0;
+  }
+  li {
+    padding: 10px;
+  }
+}
+//  trabalhos e projetos
+#title-port {
+  align-self: center;
+
+  text-align: center;
+  h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 30;
+    font-weight: 900;
+  }
+
+  ul {
+    justify-content: center;
+    padding: 0;
+    margin: auto;
+
+    li {
+      border: 2px solid $primary-color-opacity;
+      // background: $primary-color-opacity;
+      color: $primary-color-opacity;
+      width: 100px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+  }
+}
+#cards {
+  display: flex;
+  flex-flow: wrap;
+  height: max-content;
+  justify-content: center;
+}
+.card-port {
+
+  border: 1px solid $primary-color-opacity;
+  text-align: justify;
+  max-width: 300px;
+  padding: 40px;
+  margin: 30px;
+  border-radius: 40px;
+
+  img {
+    width: 300px;
+  }
+  h2,p {
+    font-family: "Raleway", sans-serif;
+    
+  }
+  h2 {
+  
+    font-size: 20;
+    font-weight: 900;
+  }
+
+  p {
+    height: 150px;
+    font-size: 15;
+    font-weight: 400;
+  }
+
+  ul {
+    justify-content: left;
+    padding: 0;
+    margin-top: 10px;
+
+    li {
+    text-align: center;
+      background: $primary-color-opacity;
+      color: $primary-color;
+      width: 100px;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+    }
+  }
+}
+
+// Contatos
+.icon {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+
+
+}
+.icon > img {
+position: relative;
+}
+
+#email-contato {
+  display: block;
+}
+
+#Contato {
+  margin: 50px;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  h1 {
+    
+    font-size: 30;
+    font-weight: 900;
+  }
+  div {
+
+    justify-content: center;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    text-align: center;
+    border:2px solid $primary-color-opacity;
+    color: $primary-color;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+  }
+
+  div p{
+    color: #ffffff;
+    font-weight: 400;
+    span {
+      width: 100px;
+      color: $primary-color; 
+    }
+  }
+
+  p {
+    color: $primary-color; 
+    font-weight: 900;
+  }
+}
+
+footer {
+  background: #111111;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+
+  p {
+    align-self: center;
+  }
+}
