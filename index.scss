@@ -188,6 +188,13 @@ header nav ul li a {
 
 #social-links ul li {
   margin: 20px;
+
+  img {
+    border-radius: 50px;
+  }
+  img:hover{
+    background: $primary-color-opacity;
+  }
 }
 
 #about-text {
@@ -328,6 +335,58 @@ header nav ul li a {
   }
 }
 
+
+
+// trajetoria
+
+#trajetoria {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+
+  h1 {
+    font-size: 30;
+  }
+
+
+}
+
+#trajetoria_table {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-traj {
+  font-family: "Raleway", sans-serif;
+  max-width: 600px;
+  border: 1px solid $primary-color;
+  background: $primary-color-opacity;
+  border-radius: 40px;
+  margin: 20px;
+  padding: 20px 50px 20px 50px;
+  text-align: left;
+  &-content {
+    text-align: justify;
+    margin-bottom: 20px;
+    
+  }
+  &-footer {
+    display: flex;
+    justify-content: space-around;
+    p {
+      color: $primary-color;
+      font-weight: 900;
+      display: inline-block;
+
+    }
+  }
+}
+
+.title-traj {
+  font-family: "Raleway", sans-serif;
+  font-size: 25;
+}
+
 // Contatos
 .icon {
   display: inline-block;
@@ -352,6 +411,9 @@ position: relative;
     
     font-size: 30;
     font-weight: 900;
+  }
+  div a:hover {
+background: $primary-color-opacity;
   }
   div {
 
@@ -384,8 +446,11 @@ position: relative;
   }
 }
 
+
+// footer page
+
 footer {
-  background: #111111;
+  background: $primary-color-opacity;
   display: flex;
   justify-content: space-around;
   text-align: center;

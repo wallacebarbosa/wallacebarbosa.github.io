@@ -170,6 +170,12 @@ header nav ul li a:hover:after {
 #social-links ul li {
   margin: 20px;
 }
+#social-links ul li img {
+  border-radius: 50px;
+}
+#social-links ul li img:hover {
+  background: rgba(105, 210, 255, 0.4941176471);
+}
 
 #about-text {
   grid-area: 2/3/4/6;
@@ -299,6 +305,49 @@ header nav ul li a:hover:after {
   border-radius: 5px;
 }
 
+#trajetoria {
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+}
+#trajetoria h1 {
+  font-size: 30;
+}
+
+#trajetoria_table {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-traj {
+  font-family: "Raleway", sans-serif;
+  max-width: 600px;
+  border: 1px solid #69d3ff;
+  background: rgba(105, 210, 255, 0.4941176471);
+  border-radius: 40px;
+  margin: 20px;
+  padding: 20px 50px 20px 50px;
+  text-align: left;
+}
+.card-traj-content {
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.card-traj-footer {
+  display: flex;
+  justify-content: space-around;
+}
+.card-traj-footer p {
+  color: #69d3ff;
+  font-weight: 900;
+  display: inline-block;
+}
+
+.title-traj {
+  font-family: "Raleway", sans-serif;
+  font-size: 25;
+}
+
 .icon {
   display: inline-block;
   width: 40px;
@@ -321,6 +370,9 @@ header nav ul li a:hover:after {
 #Contato h1 {
   font-size: 30;
   font-weight: 900;
+}
+#Contato div a:hover {
+  background: rgba(105, 210, 255, 0.4941176471);
 }
 #Contato div {
   justify-content: center;
@@ -349,7 +401,7 @@ header nav ul li a:hover:after {
 }
 
 footer {
-  background: #111111;
+  background: rgba(105, 210, 255, 0.4941176471);
   display: flex;
   justify-content: space-around;
   text-align: center;
