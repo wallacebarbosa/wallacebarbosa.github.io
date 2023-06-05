@@ -341,11 +341,12 @@ header nav ul li a:hover:after {
   color: #69d3ff;
   font-weight: 900;
   display: inline-block;
+  font-size: 15;
 }
 
 .title-traj {
   font-family: "Raleway", sans-serif;
-  font-size: 25;
+  font-size: 20;
 }
 
 .icon {
@@ -413,7 +414,7 @@ footer p {
   align-self: center;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   #sobre {
     display: block;
     justify-content: center;

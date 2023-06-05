@@ -377,6 +377,7 @@ header nav ul li a {
       color: $primary-color;
       font-weight: 900;
       display: inline-block;
+      font-size: 15;
 
     }
   }
@@ -384,7 +385,7 @@ header nav ul li a {
 
 .title-traj {
   font-family: "Raleway", sans-serif;
-  font-size: 25;
+  font-size: 20;
 }
 
 // Contatos
@@ -464,7 +465,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1000px) {
   #sobre {
     display: block;
     justify-content: center;
