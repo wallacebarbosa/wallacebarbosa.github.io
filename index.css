@@ -328,6 +328,7 @@ header nav ul li a:hover:after {
   margin: 20px;
   padding: 20px 50px 20px 50px;
   text-align: left;
+  font-size: 15;
 }
 .card-traj-content {
   text-align: justify;
