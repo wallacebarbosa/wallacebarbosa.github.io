@@ -114,8 +114,8 @@
             <div class="card-port">
                 <div>
                     <h2>Reservado</h2>
-                    <p>• Desenvolvendo uma aplicação web full-stack, onde na plataforma os clientes podem facilmente
-                        solicitar servi¸cos de
+                    <p>Desenvolvendo uma aplicação web full-stack, onde na plataforma os clientes podem facilmente
+                        solicitar serviços de
                         entregas.
                     </p>
                 </div>
@@ -131,7 +131,7 @@
             <div class="card-port">
                 <div>
                     <h2>Academy club</h2>
-                    <p>• Desenvolvi uma aplicação web full-stack moderna e eficiente, com um backend em Node.js que
+                    <p> Desenvolvi uma aplicação web full-stack moderna e eficiente, com um backend em Node.js que
                         oferece alta
                         performance e escalabilidade, e um frontend em PHP que oferece facilidade de uso e ampla adoçã o
                         pela comunidade
@@ -149,7 +149,7 @@
             <div class="card-port">
                 <div>
                     <h2>Gestão de Protocolos</h2>
-                    <p>• Projeto desenvolvido em conjunto com Hospital São Francisco de Belo Horizonte para organizar,
+                    <p>Projeto desenvolvido em conjunto com Hospital São Francisco de Belo Horizonte para organizar,
                         acompanhar, e
                         armazenar protocolos que antes eram feito em cadernos
                     </p>
@@ -178,14 +178,14 @@
             <div id="trajetoria_exp">
                 <div>
                     <p class="title-traj">Área profissional</p>
-                    <p>2016 · Atualmente</p>
+                    <p>2023 · Atualmente</p>
                 </div>
 
             </div>
             <div id="trajetoria_Academ">
                 <div>
                     <p class="title-traj">Área Academica</p>
-                    <p>2016 · Atualmente</p>
+                    <p>2023 · Atualmente</p>
                 </div>
 
             </div>
@@ -205,12 +205,12 @@
             <a class="hvr-ripple-out" href="https://api.whatsapp.com/send?phone=5531988445216" target="_blank"><span class="icon"><img src="./images/WhatsappLogo.svg" alt=""></span> vamos conversar</a>
             <div id="email-contato">
                 <!-- <span class="icon"><img src="./images/Email.svg" alt=""></span> -->
-                <p><span>Email:</span> wallace.b.b.nascimento@gmail.com</p>
-                <span class="icon"><img src="./images/CopySimple.svg" alt=""></span>
+                <p id="email"><span>Email:</span> wallace.b.b.nascimento@gmail.com</p>
+                <span id="copy_clipboard" class="icon"><img src="./images/CopySimple.svg" alt=""></span>
             </div>
         </div>
 
-        <p>Voltar ao topo <span><img src="./images/ArrowUp.svg" alt=""></span></p>
+        <a href="#sobre"><p>Voltar ao topo <span><img src="./images/ArrowUp.svg" alt=""></span></p></a>
     </section>
 
     <footer>
@@ -261,15 +261,15 @@
 
     var academ_card = [{
         title: "Graduação Engenharia de Software",
-        content: "Recém graduado pela FATEC de São José dos Campos no curso de Análise e Desenvolvimento de Sistemas.",
+        content: " Obs:. Trancamento no 5° periodo  ",
         local: "PUC Minas - Praça da Liberdade",
-        date: "Abr 2018 – fev 2021"
+        date: "Ago 2018 – fev 2021"
     },
     {
         title: "Graduação Engenharia de Controle e Automação",
-        content: "Recém graduado pela FATEC de São José dos Campos no curso de Análise e Desenvolvimento de Sistemas.",
+        content: "Recém graduando pelo Instituto Federal de Minas Gerais no curso de Engenharia de Controle e Automação",
         local: "IFMG - Sabará",
-        date: "Abr 2018 – fev 2021"
+        date: "Abr 20 – Dez 2028"
     }
     ];
 
@@ -337,13 +337,20 @@
 
     }
 
-
-
-
-
     typewriter(document.getElementById("typedtext"), aText[0]);
   
 
+</script>
+
+<script>
+function copy() {
+    // Get the text field
+    var copyText = document.getElementById("email");
+    navigator.clipboard.writeText(copyText.innerHTML.substring(20, 56));
+  
+  }
+  var iconCopy = document.getElementById("email");
+  iconCopy.onclick = copy();
 </script>
 
 </html>
