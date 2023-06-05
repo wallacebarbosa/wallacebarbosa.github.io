@@ -332,6 +332,10 @@ header nav ul li a:hover:after {
 .card-traj-content {
   text-align: justify;
   margin-bottom: 20px;
+  font-size: 15;
+}
+.card-traj-content h3 {
+  font-size: 20;
 }
 .card-traj-footer {
   display: flex;
@@ -414,7 +418,7 @@ footer p {
   align-self: center;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   #sobre {
     display: block;
     justify-content: center;

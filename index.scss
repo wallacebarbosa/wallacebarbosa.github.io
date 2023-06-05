@@ -368,6 +368,11 @@ header nav ul li a {
   &-content {
     text-align: justify;
     margin-bottom: 20px;
+    font-size: 15;
+
+    h3 {
+      font-size: 20;
+    }
     
   }
   &-footer {
@@ -465,7 +470,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1200px) {
   #sobre {
     display: block;
     justify-content: center;
